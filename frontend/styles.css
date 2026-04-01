@@ -1,0 +1,287 @@
+/* Project Developed by Shreyas M Shenoy */
+/* frontend/styles.css
+   Mint Green Theme for Secure Stego
+   Developed by Shreyas M Shenoy
+   Optimized for Conference Presentation
+*/
+
+:root {
+  --bg: #bdf5d9;           /* Mint green background */
+  --surface: #ffffff;      /* Card background */
+  --muted: #385942;        /* Muted text (dark green-gray) */
+  --accent: #2ebd86;       /* Primary mint accent */
+  --accent-2: #24a36f;     /* Slightly darker accent for hover */
+  --border: #a4eac6;       /* Border in soft green */
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --max-width: 1100px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+  color: #0a3523;
+}
+
+/* Base reset */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+
+body {
+  background: linear-gradient(180deg, var(--bg) 0%, #a7f1cd 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 34px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* Container layout */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.brand {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* Logo (round, with subtle glow) */
+.brand-mark {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #eafff4, #9ff0c7);
+  box-shadow: 0 8px 18px rgba(46, 139, 87, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.brand-mark:hover {
+  transform: scale(1.07) rotate(2deg);
+  box-shadow: 0 12px 32px rgba(46, 139, 87, 0.35);
+}
+.brand-mark svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Header text */
+.brand-text h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.3px;
+  color: #064e34;
+}
+.tagline {
+  margin: 2px 0 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Pills (header info chips) */
+.nav-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.pill {
+  background: #c5f5de;
+  color: #0f5132;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 1px solid #a0eac5;
+}
+.pill.muted {
+  background: transparent;
+  color: var(--muted);
+}
+
+/* Grid layout */
+.main-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 20px;
+}
+@media (max-width: 980px) {
+  .main-grid { grid-template-columns: 1fr; }
+}
+
+/* Card design */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 18px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* Form Fields */
+.left-panel .form .controls-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.field {
+  display: block;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.field > select,
+.field > input,
+.field > textarea {
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 14px;
+  color: #0a3523;
+  transition: all 0.15s ease;
+}
+.field > select:focus,
+.field > input:focus,
+.field > textarea:focus {
+  border-color: rgba(46, 189, 134, 0.6);
+  box-shadow: 0 0 0 3px rgba(46, 189, 134, 0.25);
+}
+textarea { min-height: 120px; resize: vertical; }
+.hint { margin-top: 6px; color: var(--muted); font-size: 13px; }
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  align-items: center;
+}
+.btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 18px rgba(46, 139, 87, 0.3);
+}
+.btn.primary:hover {
+  background: linear-gradient(90deg, #35d190, #26a471);
+  box-shadow: 0 10px 26px rgba(46, 139, 87, 0.4);
+}
+.btn.ghost {
+  background: transparent;
+  color: var(--muted);
+}
+.btn.ghost:hover {
+  background: rgba(46, 189, 134, 0.08);
+  color: #0a3523;
+}
+
+/* Preview panel */
+.preview {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+.preview img, .preview video, .preview audio {
+  max-width: 100%;
+  max-height: 360px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(46, 139, 87, 0.15);
+}
+.preview-placeholder { color: var(--muted); }
+
+/* Info & Output cards */
+.info ul {
+  padding-left: 18px;
+  margin: 8px 0;
+  color: var(--muted);
+}
+.output {
+  margin-top: 12px;
+  font-family: ui-monospace, Menlo, Monaco, "Roboto Mono", monospace;
+  font-size: 13px;
+  min-height: 90px;
+  white-space: pre-wrap;
+  color: #0a3523;
+  border-top: 1px dashed #a9e9c7;
+  padding-top: 10px;
+}
+
+/* Progress bar */
+.progress {
+  height: 8px;
+  background: #d8fbe8;
+  border-radius: 8px;
+  margin-top: 12px;
+  overflow: hidden;
+  display: none;
+}
+.progress .bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  width: 0;
+  transition: width 0.3s ease;
+}
+.status {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Footer */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.developer {
+  font-weight: 600;
+  color: #064e34;
+}
+
+/* Helpers */
+.small { font-size: 13px; }
+.muted { color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 520px) {
+  .brand-mark { width: 56px; height: 56px; }
+  .brand-text h1 { font-size: 18px; }
+  .main-grid { gap: 12px; }
+  .card { padding: 14px; }
+}
+
+/* Focus ring for accessibility */
+:focus {
+  outline: 2px solid rgba(46, 189, 134, 0.3);
+  outline-offset: 2px;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.center { display: flex; align-items: center; justify-content: center; }

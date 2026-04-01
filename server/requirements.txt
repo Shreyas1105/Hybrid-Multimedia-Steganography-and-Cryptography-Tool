@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+cryptography
+pillow
+numpy
+opencv-python
+pytest
+python-multipart

@@ -70,8 +70,8 @@ Hybrid-Multimedia-Steganography-and-Cryptography-Tool/
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
-git clone https://github.com/your-username/secure-stego.git
-cd secure-stego
+git clone https://github.com/Shreyas1105/Hybrid-Multimedia-Steganography-and-Cryptography-Tool.git
+cd Hybrid-Multimedia-Steganography-and-Cryptography-Tool
 
 ### 2️⃣ Setup virtual environment
 cd server
@@ -92,13 +92,15 @@ http://127.0.0.1:8000/ui/index.html
 
 📖 How to Use
 🔹 Encode Data
-Upload a media file (image/audio)
+Upload a media file (image/audio/video)
+Enter the password
 Enter secret message
 Click Process
 Download the encoded file
 
 🔹 Decode Data
 Upload encoded file
+Enter the password
 Click Extract
 View hidden message
 
@@ -107,4 +109,5 @@ Audio processing supports only .wav files
 File size affects data capacity
 Limited support for video files (future improvement)
 
-Author -- Shreyas M Shenoy
+###Author -- Shreyas M Shenoy
+### Any Queries : shreyasmshenoy11@gmail.com

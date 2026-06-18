@@ -109,5 +109,4 @@ Audio processing supports only .wav files
 File size affects data capacity
 Limited support for video files (future improvement)
 
-###Author -- Shreyas M Shenoy
-### Any Queries : shreyasmshenoy11@gmail.com
+###Author -- Shreyas M Shenoy, S Srimann
